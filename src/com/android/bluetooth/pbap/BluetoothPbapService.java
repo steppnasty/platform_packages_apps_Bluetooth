@@ -180,7 +180,7 @@ public class BluetoothPbapService extends Service {
 
     public BluetoothPbapService() {
         mState = BluetoothPbap.STATE_DISCONNECTED;
-        IBinder b = ServiceManager.getService(BluetoothAdapter.BLUETOOTH_SERVICE);
+        IBinder b = ServiceManager.getService(BluetoothAdapter.BLUETOOTH_MANAGER_SERVICE);
         if (b == null) {
             throw new RuntimeException("Bluetooth service not available");
         }
