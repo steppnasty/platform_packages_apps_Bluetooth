@@ -188,8 +188,8 @@ public class BluetoothOppLauncherActivity extends Activity {
         }
 
         // Check if Bluetooth may be enabled in airplane mode
-        final String airplaneModeToggleableRadios = Settings.System.getString(resolver,
-                Settings.System.AIRPLANE_MODE_TOGGLEABLE_RADIOS);
+        final String airplaneModeToggleableRadios = Settings.Global.getString(resolver,
+                Settings.Global.AIRPLANE_MODE_TOGGLEABLE_RADIOS);
         final boolean isAirplaneToggleable = airplaneModeToggleableRadios == null ? false :
                 airplaneModeToggleableRadios.contains(Settings.Global.RADIO_BLUETOOTH);
         if (isAirplaneToggleable) {
