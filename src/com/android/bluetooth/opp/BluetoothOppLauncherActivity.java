@@ -179,8 +179,8 @@ public class BluetoothOppLauncherActivity extends Activity {
         }
 
         // Check if airplane mode matters
-        final String airplaneModeRadios = Settings.System.getString(resolver,
-                Settings.System.AIRPLANE_MODE_RADIOS);
+        final String airplaneModeRadios = Settings.Global.getString(resolver,
+                Settings.Global.AIRPLANE_MODE_RADIOS);
         final boolean isAirplaneSensitive = airplaneModeRadios == null ? true :
                 airplaneModeRadios.contains(Settings.Global.RADIO_BLUETOOTH);
         if (!isAirplaneSensitive) {
